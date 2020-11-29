@@ -1,19 +1,54 @@
 {
     "name": "nasn/asn",
     "description": "desc",
-    "type": "library",
+    "keywords": [
+        "nasn",
+        "asn"
+    ],
+    "homepage": "https://github.com/nasn/asn",
     "license": "MIT",
-    "require": {},
+    "type": "library",
+    "authors": [
+        {
+            "name": "jane doe",
+            "email": "x@a.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
     "autoload": {
         "psr-4": {
-            "Nasn\\Asn\\": "src/"
+            "Nasn\\Asn\\": "src"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nasn\\Asn\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
     },
     "extra": {
         "laravel": {
             "providers": [
                 "Nasn\\Asn\\AsnServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "Asn": "Nasn\\Asn\\AsnFacade"
+            }
         }
     }
 }
