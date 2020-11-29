@@ -1,0 +1,19 @@
+{
+    "name": "nasn/asn",
+    "description": "desc",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Nasn\\Asn\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nasn\\Asn\\AsnServiceProvider"
+            ]
+        }
+    }
+}
