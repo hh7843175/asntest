@@ -15,8 +15,6 @@
             "role": "Developer"
         }
     ],
-    "require": {
-    },
     "autoload": {
         "psr-4": {
             "Nasn\\Asn\\": "src"
@@ -26,11 +24,6 @@
         "psr-4": {
             "Nasn\\Asn\\Tests\\": "tests"
         }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true
